@@ -1,2 +1,1 @@
-# ml4t
-CS7646: Machine Learning for Trading 
+Notes for Georgia Tech's [Machine Learning for Trading](http://lucylabs.gatech.edu/ml4t/) course 
