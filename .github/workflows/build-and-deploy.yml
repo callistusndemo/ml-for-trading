@@ -25,10 +25,15 @@ jobs:
       with:
         python-version: 3.7
 
-    - name: Install dependencies
-      run: |
-        conda env create -f environment.yml
-        conda activate ml-for-trading
+    - name: Setup Miniconda
+      uses: goanpeca/setup-miniconda@v1
+      with:
+        auto-update-conda: true
+        auto-activate-base: false
+        miniconda-version: 'latest'
+        python-version: 3.7
+        environment-file: environment.yml
+        activate-environment: ml-for-trading
 
     # Build the book
     - name: Build the book
