@@ -2,7 +2,7 @@
 # Book settings
 title : Machine Learning for Trading
 author: Callistus Ndemo
-logo: 'qe-logo-large.png'
+# logo: 'qe-logo-large.png'
 
 # Information about where the book exists on the web
 description: >-
@@ -45,6 +45,9 @@ latex:
     targetname: book.tex
 
 html:
+  use_edit_page_button: true
+  use_repository_button: true
+  use_issues_button: true
   comments:
     utterances:
       repo:
