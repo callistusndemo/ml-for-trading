@@ -14,16 +14,13 @@ This book is structured in 3 main chapters as the course is run:
 - [Machine Learning Algorithms for Trading](http://lucylabs.gatech.edu/ml4t/machine-learning-algorithms-for-trading/)
 
 
-The main goal of this book is to learn in public. There will be plenty of typos and errors, feel free to open a pull request or an issue.
+The main goal of this book is to learn in public. There will be plenty of typos and errors, feel free to suggest an edit.
+
+Other notes and snippets you may find helpful.  
 
 Happy learning!  
 
-% This HTML activates utteranc.es only on this page
-<script src="https://utteranc.es/client.js"
-       repo="callistusndemo/ml-for-trading"
-       issue-term="pathname"
-       label="comments"
-       theme="github-light"
-       crossorigin="anonymous"
-       async>
-</script>
+
+```python
+
+```
