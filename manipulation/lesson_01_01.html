@@ -247,12 +247,6 @@
                 
   <div class="section" id="reading-slicing-and-plotting-stocks">
 <h1>Reading, Slicing and Plotting Stocks<a class="headerlink" href="#reading-slicing-and-plotting-stocks" title="Permalink to this headline">¶</a></h1>
-<p>Python is used as a language of choice because it allows one to quickly protype algorithms with a fast computational speed. Some of it’s main features are:</p>
-<ul class="simple">
-<li><p>Strong scientific libraries</p></li>
-<li><p>Strongly maintained</p></li>
-<li><p>Fast</p></li>
-</ul>
 <div class="section" id="lesson-outline">
 <h2>Lesson Outline<a class="headerlink" href="#lesson-outline" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
@@ -260,16 +254,31 @@
 <li><p>Select subset of the data in the DataFrame through slicing and indexing</p></li>
 <li><p>Visualize data using plots</p></li>
 </ol>
-<p>The file type we’ll primarily work with is the Comma Separated Value (CSV) files. Below is an example
-of some real stock data</p>
-<script src="https://utteranc.es/client.js"
-       repo="callistusndemo/ml-for-trading"
-       issue-term="pathname"
-       label="comments"
-       theme="github-light"
-       crossorigin="anonymous"
-       async>
-</script></div>
+<p>We’ll primarily work with Comma Separated Value (CSV) files for the class. Below is an example of a CSV file with APPL stock from <a class="reference external" href="https://finance.yahoo.com/quote/AAPL/history?p=AAPL">Yahoo</a>.</p>
+<div class="highlight-csv notranslate"><div class="highlight"><pre><span></span>Date,Open,High,Low,Close,Adj Close,Volume
+1980-12-12,0.513393,0.515625,0.513393,0.513393,0.404953,117258400
+1980-12-15,0.488839,0.488839,0.486607,0.486607,0.383825,43971200
+1980-12-16,0.453125,0.453125,0.450893,0.450893,0.355655,26432000
+...
+2020-08-17,464.250000,464.350006,455.850006,458.429993,458.429993,29890400
+2020-08-18,457.410004,464.000000,456.029999,462.250000,462.250000,26408400
+2020-08-19,463.929993,468.649994,462.440002,462.829987,462.829987,36283800
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Date</span></code> - Day of transaction</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Open</span></code> - The Opening price of the stock</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">High</span></code> - Highest stock price on that date</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Low</span></code> - Lowest stock price on that date</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Close</span></code> -  Closing price of the stock.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Adj</span> <span class="pre">Close</span></code> - Closing price adjusted for <a class="reference external" href="https://www.investor.gov/introduction-investing/investing-basics/glossary/dividend">dividends</a> and <a class="reference external" href="https://www.investor.gov/introduction-investing/investing-basics/glossary/stock-split">stock splits</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Volume</span></code> - The amount of shares traded for that date</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The data in the APPL.csv is in a reverse order starting with the earliest date. This is something we’ll fix later.</p>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
