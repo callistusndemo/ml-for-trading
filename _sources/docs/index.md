@@ -17,3 +17,13 @@ This book is structured in 3 main chapters as the course is run:
 The main goal of this book is to learn in public. There will be plenty of typos and errors, feel free to open a pull request or an issue.
 
 Happy learning!  
+
+ % This HTML activates utteranc.es only on this page  
+<script src="https://utteranc.es/client.js"
+        repo="callistusndemo/ml-for-trading"
+        issue-term="pathname"
+        label="comments"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
