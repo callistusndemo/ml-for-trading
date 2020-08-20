@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>The Power of Numpy &#8212; Machine Learning for Trading</title>
+    <title>Incomplete Data &#8212; Machine Learning for Trading</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
@@ -38,8 +38,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Statistical Analysis of Time Series" href="lesson_01_04.html" />
-    <link rel="prev" title="Working with Multiple Stocks" href="lesson_01_02.html" />
+    <link rel="next" title="Histograms and Scatter Plots" href="lesson_01_06.html" />
+    <link rel="prev" title="Statistical Analysis of Time Series" href="lesson_01_04.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -86,8 +86,8 @@
    Working with Multiple Stocks
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lesson_01_03.html">
    The Power of Numpy
   </a>
  </li>
@@ -96,8 +96,8 @@
    Statistical Analysis of Time Series
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="lesson_01_05.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Incomplete Data
   </a>
  </li>
@@ -159,7 +159,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/docs/lesson_01_03.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/manipulation/lesson_01_05.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -179,10 +179,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/callistusndemo/ml-for-trading/issues/new?title=Issue%20on%20page%20%2Fdocs/lesson_01_03.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/callistusndemo/ml-for-trading/issues/new?title=Issue%20on%20page%20%2Fmanipulation/lesson_01_05.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/callistusndemo/ml-for-trading/edit/master/book/docs/lesson_01_03.ipynb"><button
+        <a class="edit-button" href="https://github.com/callistusndemo/ml-for-trading/edit/master/book/manipulation/lesson_01_05.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -201,7 +201,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/callistusndemo/ml-for-trading/master?urlpath=lab/tree/book/docs/lesson_01_03.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/callistusndemo/ml-for-trading/master?urlpath=lab/tree/book/manipulation/lesson_01_05.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -209,7 +209,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/callistusndemo/ml-for-trading/blob/master/book/docs/lesson_01_03.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/callistusndemo/ml-for-trading/blob/master/book/manipulation/lesson_01_05.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -238,8 +238,8 @@
         
               <div>
                 
-  <div class="section" id="the-power-of-numpy">
-<h1>The Power of Numpy<a class="headerlink" href="#the-power-of-numpy" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="incomplete-data">
+<h1>Incomplete Data<a class="headerlink" href="#incomplete-data" title="Permalink to this headline">¶</a></h1>
 </div>
 
     <script type="text/x-thebe-config">
@@ -255,7 +255,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./docs"
+            path: "./manipulation"
         },
         predefinedOutput: true
     }
@@ -270,8 +270,8 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="lesson_01_02.html" title="previous page">Working with Multiple Stocks</a>
-    <a class='right-next' id="next-link" href="lesson_01_04.html" title="next page">Statistical Analysis of Time Series</a>
+    <a class='left-prev' id="prev-link" href="lesson_01_04.html" title="previous page">Statistical Analysis of Time Series</a>
+    <a class='right-next' id="next-link" href="lesson_01_06.html" title="next page">Histograms and Scatter Plots</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

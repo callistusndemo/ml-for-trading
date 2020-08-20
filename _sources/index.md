@@ -18,12 +18,12 @@ The main goal of this book is to learn in public. There will be plenty of typos 
 
 Happy learning!  
 
- % This HTML activates utteranc.es only on this page  
+% This HTML activates utteranc.es only on this page
 <script src="https://utteranc.es/client.js"
-        repo="callistusndemo/ml-for-trading"
-        issue-term="pathname"
-        label="comments"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
+       repo="callistusndemo/ml-for-trading"
+       issue-term="pathname"
+       label="comments"
+       theme="github-light"
+       crossorigin="anonymous"
+       async>
 </script>

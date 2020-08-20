@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Machine Learning for Trading &#8212; Machine Learning for Trading</title>
+    <title>Histograms and Scatter Plots &#8212; Machine Learning for Trading</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
@@ -38,7 +38,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Reading, Slicing and Plotting Stocks" href="lesson_01_01.html" />
+    <link rel="next" title="Sharpe Ration and other Portfolio Stats" href="lesson_01_07.html" />
+    <link rel="prev" title="Incomplete Data" href="lesson_01_05.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -74,7 +75,7 @@
   Manipulating Financial Data
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="lesson_01_01.html">
    Reading, Slicing and Plotting Stocks
@@ -100,8 +101,8 @@
    Incomplete Data
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="lesson_01_06.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Histograms and Scatter Plots
   </a>
  </li>
@@ -158,9 +159,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/docs/index.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/manipulation/lesson_01_06.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -178,10 +179,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/callistusndemo/ml-for-trading/issues/new?title=Issue%20on%20page%20%2Fdocs/index.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/callistusndemo/ml-for-trading/issues/new?title=Issue%20on%20page%20%2Fmanipulation/lesson_01_06.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/callistusndemo/ml-for-trading/edit/master/book/docs/index.md"><button
+        <a class="edit-button" href="https://github.com/callistusndemo/ml-for-trading/edit/master/book/manipulation/lesson_01_06.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -194,6 +195,31 @@
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/callistusndemo/ml-for-trading/master?urlpath=lab/tree/book/manipulation/lesson_01_06.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/callistusndemo/ml-for-trading/blob/master/book/manipulation/lesson_01_06.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
 
     </div>
 
@@ -212,32 +238,8 @@
         
               <div>
                 
-  <div class="section" id="machine-learning-for-trading">
-<h1>Machine Learning for Trading<a class="headerlink" href="#machine-learning-for-trading" title="Permalink to this headline">¶</a></h1>
-<p>This is a collection of notes for Georgia Tech’s CS7646, Machine Learning for Trading.</p>
-<p>Below is a brief overview of the material covered from the course’s <a class="reference external" href="http://lucylabs.gatech.edu/ml4t/">website</a>:</p>
-<div class="admonition-course-overview admonition">
-<p class="admonition-title">Course Overview</p>
-<p>This course introduces students to the real world challenges of implementing machine learning based trading strategies including the algorithmic steps from information gathering to market orders. The focus is on how to apply probabilistic machine learning approaches to trading decisions. We consider statistical approaches like linear regression, Q-Learning, KNN and regression trees and how to apply them to actual stock trading situations.</p>
-</div>
-<p>This book is structured in 3 main chapters as the course is run:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="http://lucylabs.gatech.edu/ml4t/manipulating-financial-data-in-python/">Manipulating Financial Data  in Python</a></p></li>
-<li><p><a class="reference external" href="http://lucylabs.gatech.edu/ml4t/computational-investing/">Computational Investing</a></p></li>
-<li><p><a class="reference external" href="http://lucylabs.gatech.edu/ml4t/machine-learning-algorithms-for-trading/">Machine Learning Algorithms for Trading</a></p></li>
-</ul>
-<p>The main goal of this book is to learn in public. There will be plenty of typos and errors, feel free to open a pull request or an issue.</p>
-<p>Happy learning!</p>
-<script src="https://utteranc.es/client.js"
-        repo="callistusndemo/ml-for-trading"
-        issue-term="pathname"
-        label="comments"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
-<div class="toctree-wrapper compound">
-</div>
+  <div class="section" id="histograms-and-scatter-plots">
+<h1>Histograms and Scatter Plots<a class="headerlink" href="#histograms-and-scatter-plots" title="Permalink to this headline">¶</a></h1>
 </div>
 
     <script type="text/x-thebe-config">
@@ -253,7 +255,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./docs"
+            path: "./manipulation"
         },
         predefinedOutput: true
     }
@@ -268,7 +270,8 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='right-next' id="next-link" href="lesson_01_01.html" title="next page">Reading, Slicing and Plotting Stocks</a>
+    <a class='left-prev' id="prev-link" href="lesson_01_05.html" title="previous page">Incomplete Data</a>
+    <a class='right-next' id="next-link" href="lesson_01_07.html" title="next page">Sharpe Ration and other Portfolio Stats</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
