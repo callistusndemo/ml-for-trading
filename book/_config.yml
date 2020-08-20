@@ -47,4 +47,5 @@ latex:
 html:
   comments:
     utterances:
-      repo: "callistusndemo/ml-for-trading"
+      repo:
+        callistusndemo/ml-for-trading
