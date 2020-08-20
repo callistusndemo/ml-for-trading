@@ -25,8 +25,15 @@ notebook_interface            : "notebook"
 #######################################################################################
 # Launch button settings
 repository:
-  url                         : https://github.com/executablebooks/quantecon-mini-example
-  path_to_book                : "mini_book"
+  url                         : https://github.com/callistusndemo/ml-for-trading
+  path_to_book                : book/
+  branch                      : master
+
+launch_buttons:
+  notebook_interface: "jupyterlab"
+  binderhub_url: "https://mybinder.org"
+  colab_url: "https://colab.research.google.com"
+  thebe: true
 
 binder:
   binderhub_url               : "https://mybinder.org"
@@ -36,3 +43,8 @@ latex:
   latex_engine                : "xelatex"
   latex_documents:
     targetname: book.tex
+
+html:
+  comments:
+    utterances:
+      repo: "github-org/github-repo"
